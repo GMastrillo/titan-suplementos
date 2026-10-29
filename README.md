@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rede Titan Suplementos — MVP de Digitalização Comercial (5 Lojas + IA)
 
-## Getting Started
+> **Solução de digitalização comercial para rede física de suplementação e longevidade.**
+> Conectando 5 lojas físicas a vitrines digitais integradas e atendimento comercial assistido por Inteligência Artificial no WhatsApp.
 
-First, run the development server:
+---
 
+## 🚀 Sobre o Projeto
+
+Este MVP demonstra como modernizar o atendimento e a presença comercial de uma rede de 5 lojas físicas sem substituir o ERP legado ou controle de estoque existente:
+
+1. **Atendimento Inteligente com IA (WhatsApp Copilot):**
+   - Classificação em tempo real de intenções (Oportunidade Comercial, Dúvida Técnica Nutricional, Horários/Logística e Transbordo Humano).
+   - Sugestão de respostas profissionais e consultivas em 1 clique para o operador humano (estágio *Crawl* - human in the loop).
+   - Síntese automática do histórico da conversa.
+   - Encaminhamento transparente para atendentes de cada unidade física.
+2. **E-commerce & Vitrine Unificada (Modelo C):**
+   - Portal central da rede com apresentação unificada da marca.
+   - Vitrines personalizadas para as 5 unidades físicas:
+     - **Jardins (Flagship SP)** — São Paulo, SP
+     - **Moema** — São Paulo, SP
+     - **Barra da Tijuca** — Rio de Janeiro, RJ
+     - **Savassi** — Belo Horizonte, MG
+     - **Batel** — Curitiba, PR
+   - Catálogo de suplementos com filtros por categoria (Proteínas, Creatinas, Pré-Treino, Vitaminas, Snacks).
+   - Botão inteligente de WhatsApp com mensagem pré-formatada contextualizada com o produto e a unidade escolhida.
+
+---
+
+## 🛠️ Stack Tecnológica
+
+- **Framework:** Next.js 16 (App Router) + React 19 + TypeScript 5
+- **Estilização:** Tailwind CSS v4 com Design Tokens (`tokens.json`)
+- **Gerenciador de Pacotes:** pnpm
+- **Contratos & Validação:** Zod 4 (`src/schemas/domain.ts`)
+- **Qualidade & Lint:** ESLint 9 (Flat Config) + plugin local `quality` (`max-lines: 350`, `no-direct-console`, `no-direct-data-access`)
+- **Testes & Auditoria:** Vitest / Test-Runner + Playwright + `@axe-core/playwright` (WCAG AA) + `eval-runner.ts` (IA Benchmark)
+
+---
+
+## 📋 Governança e Documentos Canônicos (Genesis AI Toolkit)
+
+O projeto segue rigorosamente as 4 etapas do **Genesis AI Toolkit (Dia 0)**:
+- [`PRODUCT.md`](./PRODUCT.md) — Visão de produto, thresholds de utilidade e avaliação dos 3 eixos.
+- [`AGENTS.md`](./AGENTS.md) — Regras de governança universais para agentes e LLMs.
+- [`CLAUDE.md`](./CLAUDE.md) — Apontador canônico.
+- [`MEMORY.md`](./MEMORY.md) — Tese de negócio, topologia de 4 subagentes e 5 Leis Inegociáveis (≤ 100 linhas).
+- [`docs/architecture.md`](./docs/architecture.md) — Arquitetura de software e fluxos de dados.
+- [`docs/design-system.md`](./docs/design-system.md) — Arquetipo Athletic Prestige e design tokens.
+- [`docs/quality-gates.md`](./docs/quality-gates.md) — Portões determinísticos travados em `error`.
+- [`docs/evals.md`](./docs/evals.md) — Suite de avaliação da IA (`evals/*.json`).
+- [`docs/setup.md`](./docs/setup.md) — Manual de configuração e ambiente.
+
+---
+
+## ⚡ Como Executar
+
+### 1. Clonar e Instalar Dependências
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Rodar em Modo Desenvolvimento
+```bash
+pnpm dev
+```
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Rodar Quality Gates & Testes
+```bash
+# Validação unificada (lint + typecheck + glossário + testes)
+pnpm check
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Avaliação do assistente de IA
+pnpm eval
 
-## Learn More
+# Verificação de regressão vs baseline
+pnpm verify
 
-To learn more about Next.js, take a look at the following resources:
+# Build de produção
+pnpm build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚖️ Licença e Informações Regulatórias
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Suplementos alimentares dispensados de registro conforme RDC Anvisa 240/2018. Não substituem prescrição médica.
+Projeto desenvolvido para fins de demonstração e validação comercial.

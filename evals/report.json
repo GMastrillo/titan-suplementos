@@ -1,0 +1,97 @@
+{
+  "createdAt": "2026-10-27T21:29:00.663Z",
+  "samples": 1,
+  "threshold": 0.85,
+  "passRate": 1,
+  "total": 8,
+  "results": [
+    {
+      "id": "case-01-commercial-pricing",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "COMMERCIAL_OPPORTUNITY",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    },
+    {
+      "id": "case-02-commercial-stock",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "COMMERCIAL_OPPORTUNITY",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    },
+    {
+      "id": "case-03-technical-dosage",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "TECHNICAL_QUESTION",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    },
+    {
+      "id": "case-04-technical-composition",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "TECHNICAL_QUESTION",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    },
+    {
+      "id": "case-05-store-hours",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "STORE_HOURS_LOGISTICS",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    },
+    {
+      "id": "case-06-store-address",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "STORE_HOURS_LOGISTICS",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    },
+    {
+      "id": "case-07-human-handoff",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "HUMAN_HANDOFF",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    },
+    {
+      "id": "case-08-general-inquiry",
+      "type": "exact",
+      "samples": [
+        {
+          "output": "GENERAL_INQUIRY",
+          "pass": true
+        }
+      ],
+      "passAtK": 1
+    }
+  ]
+}

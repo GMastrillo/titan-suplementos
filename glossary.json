@@ -1,0 +1,36 @@
+{
+  "forbidden": [
+    {
+      "term": "deletar",
+      "replacement": "excluir",
+      "reason": "Padronização de interface em português brasileiro."
+    },
+    {
+      "term": "logar",
+      "replacement": "entrar",
+      "reason": "Linguagem amigável para o cliente final."
+    },
+    {
+      "term": "medicamento",
+      "replacement": "suplemento alimentar",
+      "reason": "Conformidade sanitária Anvisa: suplementos não são classificados como medicamentos."
+    },
+    {
+      "term": "reédio",
+      "replacement": "suplemento",
+      "reason": "Conformidade legal e nutricional."
+    }
+  ],
+  "approved": [
+    "suplemento",
+    "unidade",
+    "atendente",
+    "consultar disponibilidade",
+    "pedir pelo WhatsApp",
+    "rede de lojas",
+    "vitrine digital"
+  ],
+  "globs": [
+    "src/**/*.{ts,tsx,json}"
+  ]
+}
